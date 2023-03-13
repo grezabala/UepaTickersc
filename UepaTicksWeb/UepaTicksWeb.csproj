@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="font-awesome" Version="4.7.0" />
+    <PackageReference Include="FontAwesome" Version="4.7.0" />
+    <PackageReference Include="FontAwesome.MVC" Version="1.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\UepaTckestc.Dominio\UepaTicksWeb.Dominio.csproj" />
+    <ProjectReference Include="..\UepaTickestc.Infraestructura\UepaTicksWeb.Infraestructura.csproj" />
+  </ItemGroup>
+
+</Project>

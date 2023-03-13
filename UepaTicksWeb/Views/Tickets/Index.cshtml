@@ -1,0 +1,47 @@
+﻿@model Eventos
+<div class="row">
+    <div class="col-md-6 col-sm-6 col-xs-12">
+        <div class="card card-default">
+            <div class="card-heading">
+                <div class="row">
+                    <div class = "col-md-9 col-sm-9 col-xs-9">
+                        <span class ="panels-title h3">
+                            Funsiones
+                            <span class ="hidden-xs">Disponible</span>
+                        </span>
+                    </div>
+                    <div class = "col-md-11 col-xs-11">
+                        <span class = "panels-title h3">@Model.Titulo</span>
+                    </div>
+                </div>
+            </div>
+            <div class = "card-body" style = "padding: 0px 6px 6px 6px; ">
+                <div class = "row">
+                    <div class = "col-md-12 col-xs-12">
+                        <div class = "item-logo">
+                            <img src ="@Model.UrlImg" style = "width: 33rem;"/>
+                        </div>
+                    </div>
+                </div>
+                <div class = "panels-footer">
+                    <ul class = "list-unstyled">
+                        <li>
+                            <span class = "perfomance-date hidden-md hidd-sm hidden-xs">
+                                <b>
+                                    <span></span>
+                                </b>
+                            </span>
+                        </li>
+                        <li>
+                            <span class ="item-description">
+                                <span>
+                                    @Model.Descripcion
+                                </span>
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,288 @@
+﻿
+.menus-nav {
+    background-color: #ef4223 !important;
+    border-color: #ef4223;
+}
+
+.navbar-nav > li > a {
+    font-weight: bold;
+    color: #ffffff !important;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    font-family: "Lato",sans-serif;
+    outline: none;
+}
+
+.uepa-link:hover {
+    color: #ffd800 !important;
+    background-color: transparent;
+}
+
+.buttons {
+    margin-top: 5px !important;
+    margin-bottom: 10px;
+    border-radius: 15px 15px;
+}
+
+.checks {
+    background-color: #ffffff;
+    border: 1px;
+    font-size: inherit;
+}
+
+.inputs {
+    left: 255px;
+}
+
+td, th {
+    padding: 0;
+}
+
+body {
+    color: #555;
+}
+
+.conten {
+    background-color: aliceblue;
+    text-align: left;
+    font-size: 14px;
+}
+
+.form-controls {
+    background-color: #edeef0;
+    color: #555;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.links a:hover {
+    color: #dc4119;
+    text-decoration: underline;
+}
+
+.spans {
+    text-align: center;
+    font-style: italic;
+    font-size: 14px;
+    color: #37392f;
+}
+
+.containers {
+    width: 100%;
+    display: flex;
+    max-width: 1100px;
+}
+
+.cards {
+    width: 101% !important;
+    margin: 20px;
+    border-radius: 1px;
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0,0.2);
+    cursor: default;
+    transition: all 400ms ease !important;
+}
+
+    .cards:hover {
+        box-shadow: 5px 5px 12px rgba(0,0,0,0.4);
+        transform: translateY(-3%);
+    }
+
+    .cards img {
+        width: 100%;
+        height: 215px;
+    }
+
+.image {
+    width: 15rem !important;
+}
+
+.item-logo {
+    overflow: hidden;
+    border-radius: 3px;
+}
+
+    .item-logo img {
+        max-width: 770px !important;
+    }
+
+    .item-logo img {
+        cursor: pointer;
+    }
+
+
+.item-description {
+    font-size: 11px
+}
+
+/*STYLE PANEL*/
+.panels {
+    padding: 6px;
+}
+
+.panels-heading {
+    padding: 6px 6px 6px 6px;
+    border-bottom: 1px solid transparent;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+}
+
+.panels-title {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 16px;
+    color: inherit;
+}
+
+.panels-footer {
+    padding: 6px 6px;
+    background-color: #FFFFFF;
+    border-top: 1px solid #edeef0;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+.footer-text {
+    text-align: justify;
+    text-transform: uppercase;
+    color: #555;
+    font-size: 12px;
+}
+
+.menu-icon {
+    top: 15% !important;
+    left: 20%;
+    width: 50px;
+    height: 30px;
+    margin: 15px;
+    text-align: center;
+    float: right !important;
+    margin-right: -280px;
+}
+
+.footers-icon {
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    width: 550px;
+    text-align: center;
+}
+
+    .footers-icon a {
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        margin: 0 10px;
+        cursor: pointer;
+        border-radius: 10px;
+        border: 1px solid;
+        float: left;
+        transition: all 0.5s ease;
+    }
+
+/**STYLE ICON*/
+.facebook {
+    color: #bbb;
+    margin-right: 9px
+}
+
+    .facebook:hover {
+        color: #4267b2;
+        margin-right: 9px
+    }
+
+.youtube {
+    color: #bbb;
+    margin-right: 9px
+}
+
+    .youtube:hover {
+        color: #4267b2;
+        margin-right: 9px
+    }
+
+.instagram {
+    color: #bbb;
+    margin-right: 9px
+}
+
+    .instagram:hover {
+        color: #003569;
+        margin-right: 9px
+    }
+
+.twitter {
+    color: #bbb;
+    margin-right: 9px
+}
+
+    .twitter:hover {
+        color: #1da1f2;
+        margin-right: 9px
+    }
+
+.barra-menus {
+    margin: -4px;
+}
+
+.pv-margin {
+    margin: 6px auto;
+    padding: 6px 12px;
+}
+
+.pv-title {
+    font-size: 14px;
+    font-weight: bold;
+    color: #f04323;
+}
+
+.item-teaser {
+    font-size: 11px;
+    font-weight: 400;
+}
+
+.item-phone {
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.buttons-primary {
+    position: relative;
+    text-align: center;
+    color: #fff;
+    background-color: #ef4223;
+    border-color: #ef4223;
+    float: right !important;
+    font-size: 16px;
+    left: 220px !important;
+    margin-left: 28em;
+}
+
+/**STALY ICON ACCESO*/
+.icon-acceso {
+   text-decoration-color: #fff;
+   text-decoration: none !important;
+}
+
+.material-icons {
+    color: #bbb;
+    fill: #bbb;
+    text-transform: none;
+    text-decoration: none !important;
+    transition: all .3s ease-in-out;
+    border: 0 solid #FFF;
+    background: transparent;
+    display: inline-block;
+    margin: 0 4px;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-user-select: none;
+}
+
+
+.icon-login {
+    width: 36px;
+    height: 36px;
+}
+

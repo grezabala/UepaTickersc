@@ -1,0 +1,288 @@
+﻿@model UepaTicksWeb.Models.MUepaDatos
+
+
+<form asp-controller="UepaHome" asp-action="Index" method="post">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="text-center panels-heading m-auto">
+                <h5>Ficha de Inscripción Evento</h5>
+                <div class="btn-group m-auto" role="group" aria-label="Basic example">
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-dafault btn-sm active" data-toggle="happy" data-title="VENTA">VENTA</button>
+                        <button type ="button" class="btn btn-default btn-sm noActive" id="" data-toggle="happy" data-title="IMPRIMIR">IMPRIMIR</button>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-xl-5">
+                    @Html.LabelFor(m => m.NombreDelEvento)
+                    @Html.TextBoxFor(m => m.NombreDelEvento, new { @class = "form-control form-controls", placeholder = "Nombre del Evento" })
+                </div>
+                <div class="col-xl-5">
+                    @Html.LabelFor(m => m.LugarDelEvento)
+                    @Html.TextBoxFor(m => m.LugarDelEvento, new { @class = "form-control form-controls", placeholder = "Lugar del Evento" })
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-xl-3">
+                    @Html.LabelFor(m => m.TipoDeEvento)
+                    @Html.DropDownListFor(m => m.TipoDeEvento, (List<SelectListItem>)ViewBag.Eventos, "Selecionar...", new { @class = "form-control form-controls" })
+                </div>
+                <div class="col-xl-3">
+                    @Html.LabelFor(m => m.CapacidadTotalAEvento)
+                    @Html.TextBoxFor(m => m.CapacidadTotalAEvento, new { @class = "form-control form-controls", placeholder = "Capacida total a la venta" })
+                </div>
+                <div class=" col-xl-3">
+                    @Html.LabelFor(m => m.FechaDelEvento)
+                    @Html.TextBoxFor(m => m.FechaDelEvento, new { @class = "form-control form-controls", type = "date" })
+                </div>
+                <div class="col-xl-3">
+                    @Html.LabelFor(m => m.HoraDelEvento)
+                    @Html.TextBoxFor(m => m.HoraDelEvento, new { @class = "form-control form-controls", type = "time" })
+                </div>
+            </div>
+            <div class="col-lg-12">
+                <hr />
+            </div>
+            <div class="text-dark">
+                <h5>Datos de contacto</h5>
+            </div>
+            <div class="form-group row">
+                <div class="col-xl-3">
+                    @Html.LabelFor(m => m.Nombre)
+                    @Html.TextBoxFor(m => m.Nombre, new { @class = "form-control form-controls", placeholder = "Nombre" })
+                </div>
+                <div class="col-xl-3">
+                    @Html.LabelFor(m => m.Apellidos)
+                    @Html.TextBoxFor(m => m.Apellidos, new { @class = "form-control form-controls", placeholder = "Apellidos" })
+                </div>
+                <div class="col-xl-3">
+                    @Html.LabelFor(m => m.Contactos)
+                    @Html.TextBoxFor(m => m.Contactos, new { @class = "form-control form-controls", placeholder = "809, 829, 849" })
+                </div>
+                <div class="col-xl-3">
+                    @Html.LabelFor(m => m.Email)
+                    @Html.TextBoxFor(m => m.Email, new { @class = "form-control form-controls", placeholder = "Correo Electrónico" })
+                </div>
+                <div class="col-lg-12">
+                    <hr />
+                </div>
+                <ul class="">
+                    <li class="list-group-item">
+                        <label>
+                            Personas Jurídica
+                            @Html.CheckBoxFor(m => m.IsPersonaJuridica)
+                        </label>
+                        </>
+                    <li class="list-group-item">
+                        <label>
+                            Persona Física
+                            @Html.CheckBoxFor(m => m.IsPersonaFisica)
+                        </label>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-lg-12">
+                <hr />
+            </div>
+            <div class="text-dark">
+                <h5>Tipo de Taquillas</h5>
+                <p class="text-danger">(Favor llenar minimo 1)</p>
+            </div>
+            <div class="table-responsive text-center">
+                <table class="table border-light" style="border-collapse:collapse;" border="1">
+                    <thead>
+                        <tr>
+                            <th>Sección</th>
+                            <th>
+                                Precio
+                                <span class="hidden-sx">por ticket</span>
+                            </th>
+                            <th>
+                                Cantidad
+                                <span class="">por secció</span>
+                            </th>
+                            <th>Condición</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">
+                                @Html.TextBoxFor(m => m.Seccion, new { @class = "form-control form-controls" })
+                            </th>
+                            <td>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">RD$</span>
+                                    </div>
+                                    @Html.TextBoxFor(m => m.Precio, new { @class = "form-control form-controls", type = "number" })
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">.OO</span>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                @Html.TextBoxFor(m => m.CantidadPorSeccion, new { @class = "form-control form-controls" })
+                            </td>
+                            <td>
+                                @Html.DropDownListFor(m => m.Condicion, (List<SelectListItem>)ViewBag.Condicion, "Seleccionar...", new { @class = "form-control form-controls" })
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">
+                                @Html.TextBoxFor(m => m.Seccion, new { @class = "form-control form-controls" })
+                            </th>
+                            <td>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">RD$</span>
+                                    </div>
+                                    @Html.TextBoxFor(m => m.Precio, new { @class = "form-control form-controls", type = "number" })
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">.OO</span>
+                                    </div>
+                                </div>
+                            </td>
+                            <th>
+                                @Html.TextBoxFor(m => m.CantidadPorSeccion, new { @class = "form-control form-controls" })
+                            </th>
+                            <td>
+                                @Html.DropDownListFor(m => m.Condicion, (List<SelectListItem>)ViewBag.Condicion, "Seleccionar...", new { @class = "form-control form-controls" })
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">
+                                @Html.TextBoxFor(m => m.Seccion, new { @class = "form-control form-controls" })
+                            </th>
+                            <th>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">RD$</span>
+                                    </div>
+                                    @Html.TextBoxFor(m => m.Precio, new { @class = "form-control form-controls" })
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">.00</span>
+                                    </div>
+                                </div>
+                            </th>
+                            <th>
+                                @Html.TextBoxFor(m => m.CantidadPorSeccion, new { @class = "form-control form-controls" })
+                            </th>
+                            <th>
+                                @Html.DropDownListFor(m => m.Condicion, (List<SelectListItem>)ViewBag.Condicion, "Seleccionar...", new { @class = "form-control form-controls" })
+                            </th>
+                        </tr>
+                        <tr>
+                            <th scope="row">
+                                @Html.TextBoxFor(m => m.Seccion, new { @class = "form-control form-controls" })
+                            </th>
+                            <th>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">RD$</span>
+                                    </div>
+                                    @Html.TextBoxFor(m => m.Precio, new { @class = "form-control form-controls" })
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">.00</span>
+                                    </div>
+                                </div>
+                            </th>
+                            <th>
+                                @Html.TextBoxFor(m => m.CantidadPorSeccion, new { @class = "form-control form-controls" })
+                            </th>
+                            <th>
+                                @Html.DropDownListFor(m => m.Condicion, (List<SelectListItem>)ViewBag.Condicion, "Seleccionar...", new { @class = "form-control form-controls" })
+                            </th>
+                        </tr>
+                        <tr>
+                            <th scope="row">
+                                @Html.TextBoxFor(m => m.Seccion, new { @class = "form-control form-controls" })
+                            </th>
+                            <th>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">RD$</span>
+                                    </div>
+                                    @Html.TextBoxFor(m => m.Precio, new { @class = "form-control form-controls" })
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">.00</span>
+                                    </div>
+                                </div>
+                            </th>
+                            <th>
+                                @Html.TextBoxFor(m => m.CantidadPorSeccion, new { @class = "form-control form-controls" })
+                            </th>
+                            <th>
+                                @Html.DropDownListFor(m => m.Condicion, (List<SelectListItem>)ViewBag.Condicion, "Seleccionar...", new { @class = "form-control form-controls" })
+                            </th>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-lg-12">
+                <hr />
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>Opciones para la venta</h5>
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <label>
+                                Eventos a la venta sólo en línea con e-ticket?
+                                @Html.CheckBoxFor(m => m.IsTipoDeVentaDelEvento)
+                            </label>
+                        </li>
+                        <li class="list-group-item">
+                            <label>
+                                Evento a la venta en línea y demás punto con ticket físico?
+                                @Html.CheckBoxFor(m => m.IsTipoDeVentaDelEvento)
+                            </label>
+                        </li>
+                        <li class="list-group-item">
+                            <label>
+                                Habrá algún descuento?
+                                @Html.CheckBoxFor(m => m.IsAplicarDescuento)
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <h5>Opciones para el cobro</h5>
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <label>Cheque @Html.CheckBoxFor(m => m.IsPagoPorCheque)</label>
+                        </li>
+                        <li class="list-group-item">
+                            <label>
+                                Transferencia
+                                @Html.CheckBoxFor(m => m.IsPagoPorCheque)
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-12">
+                <hr />
+            </div>
+            <div class="col-12 col-xs-11 col-md-12">
+                <h4>Comentarios</h4>
+                <div class="form-row">
+                    <div class="form-group">
+                        @Html.TextAreaFor(m => m.Comentario, new { @class = "form-control form-controls", placeholder = "Envie sus comentarios...", rows = "3", cols = "143" })
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-12">
+                <hr />
+            </div>
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="float-right float-sm-right">
+                        <button type="submit" class="btn btn-block buttons-primary ">Enviar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+
