@@ -7,6 +7,8 @@ namespace UepaTicksWeb.Controllers
 {
     public class TicketsController : Controller
     {
+
+        //Lista tipada para cargar la imagen que vienen desde la clase Eventos 
         private  List<Eventos> EventoList;
         
         private List<Eventos> CargarEventos()
@@ -78,7 +80,6 @@ namespace UepaTicksWeb.Controllers
                     Descripcion = "La entrada incluye la experiencia de los restaurantes participantes en el Restaurant Week 2022." +
                                 "Evento para mayores de 18 años."
                 },
-
                 new Eventos
                 {
                     ID = 9,
@@ -86,7 +87,6 @@ namespace UepaTicksWeb.Controllers
                     Titulo = "Francisco Cespedes",
                     Descripcion = "Una noche de pura bohemia con Francisco Céspedes, junto a Carlos Macías y Cristian Allexis.",
                 },
-
                 new Eventos
                 {
                     ID = 10,
@@ -103,7 +103,6 @@ namespace UepaTicksWeb.Controllers
                     Titulo = "Nostalgia a piano y voz con Diomary La Mala y el maestro Amaury Sanchez",
                     Descripcion = "Evento para mayores de 18 años",
                 },
-
                 new Eventos
                 {
                     ID = 12,
@@ -118,66 +117,13 @@ namespace UepaTicksWeb.Controllers
             return listEventos;
 
         }
+
+        [HttpGet]
         public IActionResult Index(int id)
         {
             EventoList = CargarEventos();
             Eventos evento = EventoList.FirstOrDefault(e => e.ID == id);
             return View(evento);
-        }
-
-        public IActionResult ViewIsle() 
-        {
-            return View();
-        }
-
-        public IActionResult ViewFran() 
-        {
-          return View();
-        }
-
-        public IActionResult ViewTributo() 
-        {
-            return View();
-        }
-
-        public IActionResult ViewChaval() 
-        {
-            return View();
-        }
-
-        public IActionResult ViewDWE() 
-        {
-            return View();
-        }
-
-        public IActionResult ViewDiseng() 
-        {
-            return View();
-        }
-
-        public IActionResult ViewSDQ() 
-        {
-            return View();
-        }
-
-        public IActionResult ViewFrancis() 
-        {
-            return View();
-        }
-
-        public IActionResult ViewLasCosa()
-        {
-            return View();
-        }
-
-        public IActionResult ViewNostalgia()
-        {
-            return View();
-        }
-
-        public IActionResult ViewAreir()
-        {
-            return View();
         }
     }
 }
