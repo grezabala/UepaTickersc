@@ -144,9 +144,9 @@ body {
 }
 
 .footer-text {
-    text-align: justify;
+    text-align: justify !important;
     text-transform: uppercase;
-    color: #555;
+    color: #555 !important;
     font-size: 12px;
 }
 
@@ -162,9 +162,10 @@ body {
 }
 
 .footers-icon {
-    position: absolute;
-    top: 20%;
-    left: 20%;
+    position: relative;
+    top: 2.2%;
+    left: -250px;
+    bottom: 10px;
     width: 550px;
     text-align: center;
 }
@@ -259,10 +260,10 @@ body {
     margin-left: 28em;
 }
 
-/**STALY ICON ACCESO*/
+/**ESTILO ICON ACCESO*/
 .icon-acceso {
-   text-decoration-color: #fff;
-   text-decoration: none !important;
+    text-decoration-color: #fff;
+    text-decoration: none !important;
 }
 
 .material-icons {
@@ -286,3 +287,51 @@ body {
     height: 36px;
 }
 
+/**ESTILO PIES DE PAGINA*/
+
+.social-icons-footer {
+    margin: 3px auto;
+    z-index: 999;
+    font-size: 25px;
+}
+
+.hidden-xs {
+    display: none;
+}
+
+.hidden-md {
+    display: none;
+}
+
+.container-footer {
+    padding-right: 9px;
+    padding-left: 9px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.panel-body {
+    padding: 4px;
+}
+
+.left-resp {
+    float: left;
+}
+
+btn-xs {
+    padding: 1px 5px;
+    font-size: 12px;
+    line-height: 1.5;
+    border-radius: 3px;
+}
+
+btn.acces {
+    max-width: 350px;
+    color: black !important;
+    background-color: transparent !important;
+}
+
+.btn-acces a {
+    border-color: gray !important;
+    border: 1px solid;
+}

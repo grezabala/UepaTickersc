@@ -10,8 +10,11 @@ namespace UepaTicksWeb.Controllers
 {
     public class UepaHomeController : Controller
     {
+
+
         private void CargarDropdwon()
         {
+            //Este metodo es para cargar los Evento en el dropdwonlist que se presenta en la vista
             List<SelectListItem> listEventos = new()
             {
                 new SelectListItem { Value = "AT", Text = "Artes y Tearo" },
@@ -36,6 +39,7 @@ namespace UepaTicksWeb.Controllers
             ViewBag.Condicion = listCondicion;
         }
 
+        [HttpGet]
         public IActionResult Index()
         {
             CargarDropdwon();
@@ -45,7 +49,7 @@ namespace UepaTicksWeb.Controllers
         }
 
         [HttpPost]
-        public IActionResult Index(MUepaDatos mUepaDatos) 
+        public IActionResult Index(MUepaDatos mUepaDatos)
         {
             /* ESTA ES LA VALIDACION DEL MODELO PARA AGREGAR LO A LA BASE DE DATO
             if (ModelState.IsValid)
@@ -62,7 +66,7 @@ namespace UepaTicksWeb.Controllers
                 ModelState.AddModelError("Error!", "Por favor espere en línea un momento");
             return View(mUepaDatos);*/
             return View();
-    }
         }
-            
+    }
+
 }
