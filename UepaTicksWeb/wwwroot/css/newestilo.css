@@ -224,7 +224,7 @@ body {
     }
 
 .barra-menus {
-    margin: -4px;
+    margin: -16px;
 }
 
 .pv-margin {
@@ -280,6 +280,16 @@ body {
     cursor: pointer;
     -webkit-user-select: none;
 }
+
+/*ALINIACION DE LOS TEXTO EN LA IMAGEN*/
+.cards > p {
+    margin-left: 10px;
+    margin-top: 10px;
+    font-size: 14px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+}
+
 
 
 .icon-login {
