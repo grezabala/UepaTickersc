@@ -7,6 +7,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using UepaTicksWeb.Infraestructura.IoCExtension;
+
 
 namespace UepaTicksWeb
 {
@@ -22,6 +24,16 @@ namespace UepaTicksWeb
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddMvc();
+
+            services.AddConexionDb(Configuration);
+
+            services.AddServices();
+
+            services.AddRazorPages();
+
+            services.AddControllers();
+
             services.AddControllersWithViews();
         }
 

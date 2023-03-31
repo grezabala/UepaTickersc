@@ -74,15 +74,21 @@ body {
 }
 
 .cards {
-    width: 101% !important;
+    width: 240px !important;
     margin: 20px;
     border-radius: 1px;
-    overflow: hidden;
     background-color: #fff;
     box-shadow: 0px 1px 10px rgba(0, 0, 0,0.2);
     cursor: default;
     transition: all 400ms ease !important;
 }
+
+    .cards > img > a {
+        margin-bottom: -40px;
+        margin-top: 40px;
+        margin-right: 40px;
+        margin-left: 40px;
+    }
 
     .cards:hover {
         box-shadow: 5px 5px 12px rgba(0,0,0,0.4);
@@ -163,7 +169,7 @@ body {
 
 .footers-icon {
     position: relative;
-    top: 2.2%;
+    /* top: 2.2%;*/
     left: -250px;
     bottom: 10px;
     width: 550px;
@@ -200,6 +206,26 @@ body {
 
     .youtube:hover {
         color: #4267b2;
+        margin-right: 9px
+    }
+
+    .youtube:hover {
+        color: red;
+        margin-right: 9px
+    }
+
+.pinteres {
+    color: #bbb;
+    margin-right: 9px
+}
+
+    .pinteres:hover {
+        color: #4267b2;
+        margin-right: 9px
+    }
+
+    .pinteres:hover {
+        color: red;
         margin-right: 9px
     }
 
@@ -314,6 +340,7 @@ body {
 }
 
 .container-footer {
+    font-size: 14px;
     padding-right: 9px;
     padding-left: 9px;
     margin-right: auto;
@@ -344,4 +371,34 @@ btn.acces {
 .btn-acces a {
     border-color: gray !important;
     border: 1px solid;
+}
+
+.navbar-navs {
+    float: left;
+    margin-left: 450px !important;
+}
+
+.enlace {
+    text-align: center;
+    top: -385px;
+    display: inline-block;
+}
+
+    .enlace > a {
+        color: red;
+        font-size: 14px;
+        
+    }
+        .enlace > a > i {
+            display: inline-block;
+            overflow: hidden;
+            white-space:nowrap;
+        }
+
+/*IMG FOOTER*/
+.img-footer {
+    width: 60px;
+    height: 50px;
+    margin-left: 50px;
+    margin-bottom: 50px;
 }
