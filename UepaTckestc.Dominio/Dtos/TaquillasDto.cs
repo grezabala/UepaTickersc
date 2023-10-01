@@ -15,5 +15,17 @@ namespace UepaTicksWeb.Dominio.Dtos
         public decimal PrecioPorTicker { get; set; }
         public int CantidadPorSeccion { get; set; }
         public string Condición { get; set; }
+        public bool IsDeleted { get; set; }
+        public bool IsUpdated { get; set; }
+        public DateTime Updated { get; set; }
+        public DateTime Deleted { get; set; }
+
+        public TaquillasDto()
+        {
+            IsUpdated = false;
+            IsDeleted = false;
+            Updated = DateTime.MinValue;
+            Deleted = DateTime.MinValue;
+        }
     }
 }

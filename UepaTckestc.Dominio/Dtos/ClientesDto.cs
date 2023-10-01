@@ -17,5 +17,17 @@ namespace UepaTicksWeb.Dominio.Dtos
         public string Email { get; set; }
         public string PersonaJuridica { get; set; }
         public string PersonaFisica { get; set; }
+        public bool IsDeleted { get; set; }
+        public bool IsUpdated { get; set; }
+        public DateTime Updated { get; set; }
+        public DateTime Deleted { get; set; }
+
+        public ClientesDto()
+        {
+            IsDeleted = false;
+            Updated = DateTime.Now;
+            IsUpdated = false;
+            Deleted = DateTime.Now;
+        }
     }
 }
