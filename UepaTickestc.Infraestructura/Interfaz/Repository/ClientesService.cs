@@ -18,9 +18,10 @@ namespace UepaTicksWeb.Infraestructura.Interfaz.Repository
         {
             using var cn = new SqlConnection(conexion);
             using var cmd = new SqlCommand("", cn);
-
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.Clear();
+            {
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.Clear();
+            }
 
             SqlParameter nombre = new()
             {
